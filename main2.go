@@ -5,6 +5,7 @@ import "fmt"
 func main2() {
 
 	// Arrays
+	fmt.Println("This file talks about arrays and slices in golang")
 
 	var namesInArray [4]string = [4]string{"Yoshi", "Mario", "Luigi", "Bee"}
 	

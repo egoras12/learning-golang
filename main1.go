@@ -4,6 +4,8 @@ package main
 import "fmt"
 
 func main1() {
+
+	fmt.Println("This file talks about declaring variables and using the fmt package")
 	age := 22;
 
 	name := "Bethrand"
