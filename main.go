@@ -19,4 +19,17 @@ func main () {
 
 	fmt.Println(mainMap)
 
+	mainMap["country"] = "Nigeria"
+	
+	fmt.Println(mainMap)
+
+	mainMap2 := map[string]interface{}{
+	"name": "Bethrand Nnaemeka",
+	"age": 26,
+	"DOB": "21/10/2000",
+	"married": false,
+	"height": 5.9,
+	}
+
+	fmt.Println(mainMap2)
 }
