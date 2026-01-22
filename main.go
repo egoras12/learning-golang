@@ -31,5 +31,23 @@ func main () {
 	"height": 5.9,
 	}
 
-	fmt.Println(mainMap2)
+	fmt.Println(mainMap2["age"])
+
+	// looping through the maps
+
+	for key, value := range mainMap2 {
+		fmt.Printf("The key is %v and value is %v \n", key, value)
+	}
+
+	// Declaring arrays
+	// var mainArray []string = []string{"Tissue", "Toilet-paper"}
+	// fmt.Println(mainArray)
+
+	// Declaring maps [objects kind of]
+	// var mainMap3 map[string]interface{} = map[string]interface{}{
+	// 	"main-1": "Hello",
+	// 	"main-2": "Hello-2",
+	// 	"main-3": "Hello-3",
+	// }
+	// fmt.Println(mainMap3)
 }
