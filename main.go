@@ -4,17 +4,15 @@ import (
 	"fmt"
 )
 
-func updateName(x string) {
-	x = "Khalifa"
+func updatename(x string) {
+	x = "Emeka"
 }
 
 func main() {
-	fmt.Println("This is the 10th file, explaining what Pass by Values are")
 
-	name := "Mia"
+	name := "Bethrnad"
 
-	updateName(name)
-
+	updatename(name)
 	fmt.Println(name)
 }
 
