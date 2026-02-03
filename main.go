@@ -4,16 +4,27 @@ import (
 	"fmt"
 )
 
-func updatename(x string) {
-	x = "Emeka"
+func updateNamePointer(x *string) {
+	*x = "Khalifa"
 }
 
-func main() {
+func main () {
+	fmt.Println("This is the 10th file explaining how pointers and refernce work")
 
-	name := "Bethrnad"
+	// Pointers just point to another memory block
 
-	updatename(name)
-	fmt.Println(name)
+	name := "Bethrand"
+
+	namePointer := &name // Basically this "&" sign points to the location holding the value Bethrand.
+
+	fmt.Printf("This is the pointer to the variable 'name': %v \n", namePointer)
+
+	// We can also dereference a pointer to get the value stored at that memory location
+	
+	fmt.Printf("This is the value stored at the memory location pointed to by 'namePointer' %v \n", 	*namePointer) // The "*" sign dereferences the pointer to get the value stored at that memory location
+
+
+	updateNamePointer(namePointer)
+
+	fmt.Printf("You can see that after updating the value using the pointer, the new value is %v \n", name)
 }
-
-// Well still trying to understand this pass by value thing, but from what I get is that when we pass a variable to a function, it creates a copy of that variable and any changes made to that variable inside the function do not affect the original variable outside the function. So in this case, when we call updateName(name), it creates a copy of name and assigns it to x. When we change x to "Khalifa", it does not change the original name variable in main, which remains "Mia". Hence, when we print name in main, it still outputs "Mia".
