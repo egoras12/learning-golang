@@ -4,27 +4,12 @@ import (
 	"fmt"
 )
 
-func updateNamePointer(x *string) {
-	*x = "Khalifa"
-}
-
-func main () {
-	fmt.Println("This is the 10th file explaining how pointers and refernce work")
-
-	// Pointers just point to another memory block
-
-	name := "Bethrand"
-
-	namePointer := &name // Basically this "&" sign points to the location holding the value Bethrand.
-
-	fmt.Printf("This is the pointer to the variable 'name': %v \n", namePointer)
-
-	// We can also dereference a pointer to get the value stored at that memory location
-	
-	fmt.Printf("This is the value stored at the memory location pointed to by 'namePointer' %v \n", 	*namePointer) // The "*" sign dereferences the pointer to get the value stored at that memory location
+func main() {
+	fmt.Println("This is the next file on the line, and we're going to talk about struct in this file")
+	fmt.Println("when running this one, input thi command ==> go run main12.go bill12.go. because 2 files are dependent on them")
 
 
-	updateNamePointer(namePointer)
+	bill := bill12("Bethrand")
 
-	fmt.Printf("You can see that after updating the value using the pointer, the new value is %v \n", name)
+	fmt.Println(bill)
 }
