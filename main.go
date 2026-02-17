@@ -10,6 +10,8 @@ func main() {
 
 
 	bill := bill12("Bethrand")
+	bill13 := bill12("Beth") // this is a redeclaration of the bill variable, and it will cause an error. because we can't redeclare a variable in the same scope. to fix this, we can either change the name of the variable or we can use the short declaration operator (:=) to declare and initialize the variable in one step. like this: bill := bill12("Beth")
 
 	fmt.Println(bill)
+	fmt.Println(bill13)
 }
