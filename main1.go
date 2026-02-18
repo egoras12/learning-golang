@@ -14,8 +14,5 @@ func main1() {
 
 	var savedPrintLine = fmt.Sprintf("The language I'm using to build this project is %v and the version number is %v", "Golang", 1.22)
 
-	savedPrintLine2 := fmt.Sprintf("The line is 17, and we're testing out stuffs.")
-
 	fmt.Println(savedPrintLine)
-	fmt.Println(savedPrintLine2)
 }
