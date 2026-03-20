@@ -27,6 +27,4 @@ func main11 () {
 	updateNamePointer(namePointer)
 
 	fmt.Printf("You can see that after updating the value using the pointer, the new value is %v \n", name)
-
-	fmt.Println("Testing again...")
 }
