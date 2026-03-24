@@ -29,4 +29,6 @@ func main11 () {
 	fmt.Printf("You can see that after updating the value using the pointer, the new value is %v \n", name)
 
 	fmt.Printf("The pointer itself is still pointing to the same memory location: %v \n", namePointer)
+
+	fmt.Printf("Hello world")
 }
