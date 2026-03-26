@@ -14,4 +14,10 @@ func main() {
 
 	fmt.Println(bill)
 	fmt.Println(bill13)
+
+	// Well, I learn about const today 
+
+	const pi = 3.14 // this is a constant variable, and it cannot be changed. if we try to change the value of pi, it will cause an error. because constants are immutable, and they cannot be changed after they are declared.
+
+	fmt.Println(pi)
 }
