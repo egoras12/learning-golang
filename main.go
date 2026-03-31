@@ -4,26 +4,43 @@ import (
 	"fmt"
 )
 
-func main() {
-	fmt.Println("This is the next file on the line, and we're going to talk about struct in this file")
-	fmt.Println("when running this one, input thi command ==> go run main12.go bill12.go. because 2 files are dependent on them")
+func getCreator(os string) string {
+	var creator string
+	switch os {
+	case "linux":	
+		creator = "Linus Torvalds"
+	case "windows":
+		creator = "Bill Gates"
 
+	// all three of these cases will set creator to "A Steve"
+	case "macOS":
+		fallthrough
+	case "Mac OS X":
+		fallthrough
+	case "mac":
+		creator = "A Steve"
 
-	bill := bill12("Bethrand")
-	bill13 := bill12("Beth") // this is a redeclaration of the bill variable, and it will cause an error. because we can't redeclare a variable in the same scope. to fix this, we can either change the name of the variable or we can use the short declaration operator (:=) to declare and initialize the variable in one step. like this: bill := bill12("Beth")
-
-	fmt.Println(bill)
-	fmt.Println(bill13)
-
-	// Well, I learn about const today 
-
-	const pi = 3.14 // this is a constant variable, and it cannot be changed. if we try to change the value of pi, it will cause an error. because constants are immutable, and they cannot be changed after they are declared.
-
-	fmt.Println(pi)
-
-	if pi > 4 {
-		fmt.Println("Return null")
-	} else {
-		fmt.Println("Return pi")
+	default:
+		creator = "Unknown"
 	}
+	return creator
 }
+
+func main()  {
+	
+	if pi := 3.14; pi > 44 {
+		fmt.Println("The 1st value is greater trhan the value of pi")
+	} else if pi >12 {
+		fmt.Println("The 2nd value is still greater than the value of pi")
+	} else {
+		fmt.Println("This is just the last block being called")
+	}
+
+	// Case Statements
+
+	fmt.Printf("This is the creator of the %s operating system: %s\n", "linux", getCreator("linux"))
+}
+
+
+
+
