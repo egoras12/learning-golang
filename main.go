@@ -38,7 +38,7 @@ func main()  {
 
 	// Case Statements
 
-	fmt.Printf("This is the creator of the %s operating system: %s\n", "windows", getCreator("windows"))
+	fmt.Printf("This is the creator of the %s operating system: %s\n", "macOS", getCreator("macOS"))
 }
 
 
