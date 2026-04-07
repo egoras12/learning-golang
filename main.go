@@ -36,9 +36,22 @@ func main()  {
 		fmt.Println("This is just the last block being called")
 	}
 
-	// Case Statements
-
+	
 	fmt.Printf("This is the creator of the %s operating system: %s\n", "macOS", getCreator("macOS"))
+	
+	// Case Statements
+	polyMeter := 100
+
+	switch polyMeter {
+	case 10:
+		fmt.Printf("This is the correct value of polymeter %d\n", polyMeter)
+
+	case 100:
+		fmt.Printf("This is the correct value of polymeter %d\n", polyMeter)
+
+	case 1000:
+		fmt.Printf("This is the correct value of polymeter %d\n", polyMeter)
+	}
 }
 
 
