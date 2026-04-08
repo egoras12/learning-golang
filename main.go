@@ -40,7 +40,7 @@ func main()  {
 	fmt.Printf("This is the creator of the %s operating system: %s\n", "macOS", getCreator("macOS"))
 	
 	// Case Statements
-	polyMeter := 100
+	polyMeter := 10
 
 	switch polyMeter {
 	case 10:
@@ -52,8 +52,32 @@ func main()  {
 	case 1000:
 		fmt.Printf("This is the correct value of polymeter %d\n", polyMeter)
 	}
+
+	// the _ means we should ignore the 2nd return statement
+	tierVal, _ := multipleReturns(10000)
+
+	fmt.Println(tierVal)
+
 }
 
+func multipleReturns (tier int)( string, string ){
 
+	switch tier {
+	case 10:
+		return "This is the lowest tier", "Tier 10"
+
+	case 100:
+		return "This is the 2nd lowest tier", "Tier 100"
+
+	case 500:
+		return "This is the 3rd tier and it's an okay tier", "Tier 500"
+
+	case 1000:
+		return "This is the last tier, and it's an elite tier", "Tier 1000"
+
+	default:
+		return "This is a default tier, and it's not a good tier", "It means that the tier you entered is not valid"
+	}
+}
 
 
