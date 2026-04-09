@@ -7,7 +7,7 @@ import (
 func getCreator(os string) string {
 	var creator string
 	switch os {
-	case "linux":	
+	case "linux":
 		creator = "Linus Torvalds"
 	case "windows":
 		creator = "Bill Gates"
@@ -26,19 +26,18 @@ func getCreator(os string) string {
 	return creator
 }
 
-func main()  {
-	
+func main() {
+
 	if pi := 3.14; pi > 44 {
 		fmt.Println("The 1st value is greater trhan the value of pi")
-	} else if pi >12 {
+	} else if pi > 12 {
 		fmt.Println("The 2nd value is still greater than the value of pi")
 	} else {
 		fmt.Println("This is just the last block being called")
 	}
 
-	
 	fmt.Printf("This is the creator of the %s operating system: %s\n", "macOS", getCreator("macOS"))
-	
+
 	// Case Statements
 	polyMeter := 10
 
@@ -58,9 +57,10 @@ func main()  {
 
 	fmt.Println(tierVal)
 
+	fmt.Println(earlyGuardClauseReturn(188))
 }
 
-func multipleReturns (tier int)( string, string ){
+func multipleReturns(tier int) (string, string) {
 
 	switch tier {
 	case 10:
@@ -80,4 +80,19 @@ func multipleReturns (tier int)( string, string ){
 	}
 }
 
+// ealry guard clause return
 
+func earlyGuardClauseReturn(num int) string {
+	if num == 11 {
+		return "fail"
+	}
+	if num == 22 {
+		return "fail"
+	}
+
+	if num == 10 {
+		return "success"
+	}
+
+	return "failed in a far worse manner"
+}
