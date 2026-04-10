@@ -94,5 +94,5 @@ func earlyGuardClauseReturn(num int) string {
 		return "success"
 	}
 
-	return "failed in a far worse manner"
+	return "failed in a worser manner"
 }
