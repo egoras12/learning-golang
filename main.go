@@ -16,4 +16,7 @@ func main () {
 	answer := reformat("Bethrand", formatterFunc)
 
 	fmt.Println(answer)
+
+	stri := fmt.Sprintln("Didn't learn anything today, and that's a bummer")
+	fmt.Println(stri)
 }
