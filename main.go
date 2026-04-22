@@ -17,6 +17,6 @@ func main () {
 
 	fmt.Println(answer)
 
-	stri := fmt.Sprintln("Didn't learn anything today, and that's a bummer")
+	stri := fmt.Sprintln("Did not learn anything today, and that's a bummer")
 	fmt.Println(stri)
 }
