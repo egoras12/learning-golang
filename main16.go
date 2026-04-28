@@ -48,7 +48,7 @@ func connectToPaymentProvider() bool {
 	return false
 }
 
-func test(dbSuccess, paymentSuccess bool) {
+func testProject(dbSuccess, paymentSuccess bool) {
 	shouldConnectToDB = dbSuccess
 	shouldConnectToPaymentProvider = paymentSuccess
 	bootup()
@@ -56,8 +56,8 @@ func test(dbSuccess, paymentSuccess bool) {
 }
 
 func main16() {
-	test(true, true)
-	test(false, true)
-	test(true, false)
-	test(false, false)
+	testProject(true, true)
+	testProject(false, true)
+	testProject(true, false)
+	testProject(false, false)
 }
