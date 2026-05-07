@@ -1,22 +1,24 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
-func formatterFunc(message string) string {
-	return "TEXTIO: " + message + "..."
+type authenticationInfo struct {
+	username string
+	password string
 }
 
-func reformat(message string, formatter func(string) string) string {
-	return formatter(message); 
+// Let's clean up Textio's authentication logic. We store our user's authentication data inside an authenticationInfo struct. We need a method that can take that data and return a basic authorization string.
+
+func (auth authenticationInfo) login() string {
+	return fmt.Sprintf("Authorization: Basic %v:%v", auth.username, auth.password)
 }
 
-func main () {
-	answer := reformat("Bethrand", formatterFunc)
+func main() {
 
-	fmt.Println(answer)
+	person := authenticationInfo{
+		"Bethrand",
+		"1234567890",
+	}
 
-	stri := fmt.Sprintln("Did not learn any thing today, and that's a bummer")
-	fmt.Println(stri)
+	fmt.Println(person.login())
 }
