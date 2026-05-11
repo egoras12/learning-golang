@@ -1,24 +1,97 @@
+// package main                      // first implementation, before refactoring
+
+// import "fmt"
+
+// type User struct {
+// 	Name string
+// 	Membership
+// }
+
+// type Membership struct {
+// 	Type string
+// 	MessageCharLimit int
+// }
+
+// func newUser(name string, membershipType string) User {
+// 	// ?
+
+// 	if membershipType == "premium" {
+// 		return User{
+// 			Name: name,
+// 			Membership: Membership{
+// 				Type: "premium",
+// 				MessageCharLimit: 1000,
+// 			},
+// 		}
+// 	} else {
+// 		return User{
+// 			Name: name,
+// 			Membership: Membership{
+// 				Type: "regular",
+// 				MessageCharLimit: 100,
+// 			},
+// 		}
+// 	}
+// }
+
+// func main24 () {
+// 	fmt.Println(newUser("Bethrand", "premium"))
+// }
+
 package main
 
 import "fmt"
 
-type authenticationInfo struct {
-	username string
-	password string
+//
+
+func (u User) sendMessage(message string, messageLength int) (string, bool) {
+
+	if messageLength > u.MessageCharLimit {
+		return "", false
+	}
+
+	return message, true
 }
 
-// Let's clean up Textio's authentication logic. We store our user's authentication data inside an authenticationInfo struct. We need a method that can take that data and return a basic authorization string.
+// don't touch below this line
 
-func (auth authenticationInfo) login() string {
-	return fmt.Sprintf("Authorization: Basic %v:%v", auth.username, auth.password)
+type User struct {
+	Name string
+	Membership
+}
+
+type Membership struct {
+	Type             string
+	MessageCharLimit int
+}
+
+func newUser(name string, membershipType string) User {
+	membership := Membership{Type: membershipType}
+	if membershipType == "premium" {
+		membership.MessageCharLimit = 1000
+	} else {
+		membership.Type = "standard"
+		membership.MessageCharLimit = 100
+	}
+	return User{Name: name, Membership: membership}
 }
 
 func main() {
 
-	person := authenticationInfo{
-		"Bethrand",
-		"1234567890",
-	}
+	// first implementation, before refactoring
 
-	fmt.Println(person.login())
+	// newUserMember := User{
+	// 	"Bethrand",
+	// 	Membership{
+	// 		Type:             "premium",
+	// 		MessageCharLimit: 1000,
+	// 	},
+	// }
+
+	// fmt.Println(newUserMember.sendMessage("Hello, World!", len("Hello, World!")))
+
+	user := newUser("Bethrand", "premium")
+
+	msg, ok := user.sendMessage("Hello World", len("Hello World!"))
+	fmt.Println(msg, ok)
 }
