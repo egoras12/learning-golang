@@ -1,14 +1,7 @@
 package main
 
-import "fmt"
+import ("fmt")
 
-func main () {
-	user := newUser("Bethrand", "premium")
-	message, sent := user.sendMessage("Hello, World!", 13)
-
-	if sent {
-		fmt.Printf("Message sent: %s\n", message)
-	} else {
-		fmt.Println("Message not sent: exceeds character limit.")
-	}
+func main() {
+	fmt.Println("We're going to be learning about interfaces types in Go!")
 }
