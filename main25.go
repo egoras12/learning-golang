@@ -10,5 +10,6 @@ func main25 () {
 		fmt.Printf("Message sent: %s\n", message)
 	} else {
 		fmt.Println("Message not sent: exceeds character limit.")
+		fmt.Println("This system is super fastttttttt")
 	}
 }
